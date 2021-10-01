@@ -43,6 +43,7 @@ services:
     container_name: php_${PROJECT_NAME}
     volumes:
       - ./wordpress:/var/www/html:delegated
+      - ./php/php.ini:/usr/local/etc/php/php.ini      
     networks:
       - wordpress
 
