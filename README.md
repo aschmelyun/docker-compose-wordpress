@@ -10,6 +10,8 @@ Next, navigate in your terminal to the directory you cloned this, and spin up th
 
 After that completes, follow the steps from the [src/README.md](src/README.md) file to get your WordPress installation added in (or create a new blank one).
 
+Copy env.sample to .env and setup your secrets there.
+
 Bringing up the Docker Compose network with `site` instead of just using `up`, ensures that only our site's containers are brought up at the start, instead of all of the command containers as well. The following are built for our web server, with their exposed ports detailed:
 
 - **nginx** - `:80`
