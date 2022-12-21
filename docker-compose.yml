@@ -8,7 +8,7 @@ services:
     build:
       context: .
       dockerfile: nginx.dockerfile
-    container_name: nginx${PROJECT_NAME}
+    container_name: nginx_${PROJECT_NAME}
     ports:
       - 80:80
       - 443:443
@@ -22,7 +22,7 @@ services:
 
   mysql:
     image: mysql:5.7.29
-    container_name: mysql${PROJECT_NAME}
+    container_name: mysql_${PROJECT_NAME}
     restart: always
     ports:
       - 3306:3306
@@ -51,7 +51,7 @@ services:
     build:
       context: .
       dockerfile: php.dockerfile
-    container_name: wp${PROJECT_NAME}
+    container_name: wp_${PROJECT_NAME}
     entrypoint: ['wp', '--allow-root']
     volumes:
       - ./wordpress:/var/www/html:delegated
